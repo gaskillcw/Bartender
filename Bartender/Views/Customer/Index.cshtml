@@ -1,5 +1,31 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model List<Bartender.Models.Drink>
+
+<div class="container">
+    <h2>Customer Portal</h2>
+</div>
+
+<section class="container">
+   
+        <table class="table-primary">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Ingredients</th>
+            </tr>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.Name</td>
+                    <td>@x.Price</td>
+                    <td>@x.Ingredients</td>
+                    <td>
+                        <div class="volunteer-options">
+                            <!-- ADD A "PLACE ORDER" BUTTON -->
+                            
+                        </div>
+                    </td>
+                </tr>
+            }
+        </table>
+    
+</section>
