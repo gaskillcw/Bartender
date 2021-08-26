@@ -10,6 +10,7 @@ namespace Bartender.Repository
     {
         public List<User> Users;
         public List<Drink> Drinks;
+        public List<Order> Orders;
 
         public Repository()
         {
@@ -43,6 +44,15 @@ namespace Bartender.Repository
                     "2 ounces - Coconut milk", "8 ounces - White rum", 
                 "2 tablespoons - Fresh lime juice", "2 ounces - Dark rum (optional)",
                 "1 Banana", "Maraschino cherries and lime wedges (for serving)"}
+            });
+
+            // create list of orders
+            Orders = new List<Order>();
+
+            // populate list of orders
+            Orders.Add(new Order()
+            {
+                OrderID = Guid.NewGuid().ToString()
             });
 
 
