@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Bartender.Models;
+using Bartender.Repository;
 
 namespace Bartender.Controllers
 {
@@ -20,7 +22,9 @@ namespace Bartender.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Drink> drinks = _repository.Drinks;
+
+            return View(drinks.ToList());
         }
     }
 }
