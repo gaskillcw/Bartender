@@ -36,12 +36,12 @@ namespace Bartender.Controllers
         // DELETE THESE TWO ACTIONS ONCE LOGIN IMPLEMENTED
         public IActionResult Staff()
         {
-            return View();
+            return View("~/Views/Staff/Index.cshtml");
         }
 
         public IActionResult Customer()
         {
-            return View();
+            return View("~/Views/Customer/Index.cshtml");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

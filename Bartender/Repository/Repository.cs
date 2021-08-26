@@ -10,5 +10,27 @@ namespace Bartender.Repository
     {
         public List<User> Users;
         public List<Drink> Drinks;
-    }
-}
+
+        public Repository()
+        {
+            Users = new List<User>();
+            Users.Add(new User()
+            {
+                Username = "gaskillcw",
+                Password = "test",
+                Roles = { "Staff" }
+            });
+
+            Users.Add(new User()
+            {
+                Username = "sacarali",
+                Password = "test",
+                Roles = { "Customer" }
+            });
+
+
+        } // end Repository method
+
+    } // end Repository class
+
+} // end Repository namespace
