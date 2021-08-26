@@ -7,13 +7,8 @@ namespace Bartender.Models
 {
     public class Drink
     {
-        public Drink()
-        {
-            Ingredients = new List<string>();
-        }
-
         public string Name { get; set; }
         public float Price { get; set; }
-        public List<string> Ingredients { get; set; }
+        public string Ingredients { get; set; }
     }
 }

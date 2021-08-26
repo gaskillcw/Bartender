@@ -40,10 +40,10 @@ namespace Bartender.Repository
             {
                 Name = "Pina Colada",
                 Price = 11.99F,
-                Ingredients = {"1/2 - Pineapple", "6 ounces - Cream of coconut", 
-                    "2 ounces - Coconut milk", "8 ounces - White rum", 
-                "2 tablespoons - Fresh lime juice", "2 ounces - Dark rum (optional)",
-                "1 Banana", "Maraschino cherries and lime wedges (for serving)"}
+                Ingredients = "1/2 - Pineapple, 6 ounces - Cream of coconut, " +
+                "2 ounces - Coconut milk, 8 ounces - White rum, " +
+                "2 tablespoons - Fresh lime juice, 2 ounces - Dark rum (optional), " +
+                "1 Banana, Maraschino cherries and lime wedges (for serving)"
             });
 
             // create list of orders
