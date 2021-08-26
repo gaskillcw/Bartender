@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace Bartender.Controllers
 {
+    
+
     public class DrinkController : Controller
     {
+        private Repository _repository;
+
+        public DrinkController(Repository repository)
+        {
+            _repository = repository;
+        }
+
+
         public IActionResult Index()
         {
             return View();
