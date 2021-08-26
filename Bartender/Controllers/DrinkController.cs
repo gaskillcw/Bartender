@@ -10,9 +10,9 @@ namespace Bartender.Controllers
 
     public class DrinkController : Controller
     {
-        private Repository _repository;
+        private Repository.Repository _repository;
 
-        public DrinkController(Repository repository)
+        public DrinkController(Repository.Repository repository)
         {
             _repository = repository;
         }
