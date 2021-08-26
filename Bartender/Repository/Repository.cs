@@ -13,7 +13,10 @@ namespace Bartender.Repository
 
         public Repository()
         {
+            // create list of users
             Users = new List<User>();
+
+            // populate list of users
             Users.Add(new User()
             {
                 Username = "gaskillcw",
@@ -27,6 +30,22 @@ namespace Bartender.Repository
                 Password = "test",
                 Roles = { "Customer" }
             });
+
+            // create list of drinks
+            Drinks = new List<Drink>();
+
+            // populate list of drinks
+            Drinks.Add(new Drink()
+            {
+                Name = "Pina Colada",
+                Price = 11.99F,
+                Ingredients = {"1/2 - Pineapple", "6 ounces - Cream of coconut", 
+                    "2 ounces - Coconut milk", "8 ounces - White rum", 
+                "2 tablespoons - Fresh lime juice", "2 ounces - Dark rum (optional)",
+                "1 Banana", "Maraschino cherries and lime wedges (for serving)"}
+            });
+
+
 
 
         } // end Repository method
