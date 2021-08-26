@@ -52,7 +52,9 @@ namespace Bartender.Repository
             // populate list of orders
             Orders.Add(new Order()
             {
-                OrderID = Guid.NewGuid().ToString()
+                OrderID = Guid.NewGuid().ToString(),
+                Customer = "sacarali",
+                Item = "Pina Colada"
             });
 
 
