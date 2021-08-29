@@ -8,13 +8,13 @@ using Bartender.Repository;
 
 namespace Bartender.Controllers
 {
-    
 
-    public class DrinkController : Controller
+
+    public class CustomerController : Controller
     {
         private Repository.Repository _repository;
 
-        public DrinkController(Repository.Repository repository)
+        public CustomerController(Repository.Repository repository)
         {
             _repository = repository;
         }
@@ -24,7 +24,7 @@ namespace Bartender.Controllers
         {
             IEnumerable<Drink> drinks = _repository.Drinks;
 
-            return View("~/Views/Customer/Index.cshtml", drinks.ToList());
+            return View(drinks.ToList());
         }
     }
 }
