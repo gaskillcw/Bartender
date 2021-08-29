@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Bartender.Repository;
 
 namespace Bartender
 {
@@ -24,6 +25,8 @@ namespace Bartender
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddSingleton<Repository.Repository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
