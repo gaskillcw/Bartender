@@ -6,6 +6,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Bartender.Models.ViewModels;
+using Bartender.Services.Interfaces;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Bartender.Repository;
+using Microsoft.AspNetCore.Authentication;
 
 namespace Bartender.Controllers
 {
