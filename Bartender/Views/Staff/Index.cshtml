@@ -1,5 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model List<Bartender.Models.Order>
+
+<div class="container">
+    <h2>Staff Portal</h2>
+</div>
+
+<section class="container">
+
+    <table class="table-primary">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Ingredients</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.OrderID</td>
+                <td>@x.Username</td>
+                <td>@x.Item</td>
+                <td>
+                    <div class="options">
+                        <!-- ADD A "ORDER READY" BUTTON which removes the order from the list, THIS IS A DUMMY PLACEHOLDER -->
+                        @Html.ActionLink("Order Ready", "Index", "Home", null, new { @class = "btn btn-outline-dark m-2" })
+
+                    </div>
+                </td>
+            </tr>
+        }
+    </table>
+
+</section>
