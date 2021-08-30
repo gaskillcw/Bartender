@@ -40,10 +40,18 @@ namespace Bartender.Repository
             {
                 Name = "Pina Colada",
                 Price = 11.99F,
-                Ingredients = "1/2 - Pineapple, 6 ounces - Cream of coconut, " +
-                "2 ounces - Coconut milk, 8 ounces - White rum, " +
-                "2 tablespoons - Fresh lime juice, 2 ounces - Dark rum (optional), " +
-                "1 Banana, Maraschino cherries and lime wedges (for serving)"
+                Ingredients = "Pineapple, Cream of coconut, " +
+                "Coconut milk, White rum, " +
+                "Fresh lime juice, Dark rum (optional), " +
+                "Banana, Maraschino cherries and lime wedges (for serving)"
+            });
+
+            Drinks.Add(new Drink()
+            {
+                Name = "Whiskey Sour",
+                Price = 8.99F,
+                Ingredients = "Bourbon, Fresh lemon juice, " +
+                "Simple syrup, and orange wedges and Maraschino cherries (for serving)"
             });
 
             // create list of orders
@@ -53,7 +61,7 @@ namespace Bartender.Repository
             Orders.Add(new Order()
             {
                 OrderID = Guid.NewGuid().ToString(),
-                Customer = "sacarali",
+                Username = "sacarali",
                 Item = "Pina Colada"
             });
 

@@ -8,7 +8,7 @@ namespace Bartender.Models
     public class Order
     {
         public string OrderID { get; set; }
-        public string Customer { get; set; }
+        public string Username { get; set; }
         public string Item { get; set; }
     }
 }
