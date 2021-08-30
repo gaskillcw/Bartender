@@ -2,4 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 
+<div class="container">
+    <div class="row">
+        <a asp-controller="Customer" asp-action="Index" class="col">
+            <div class="action-box">Customer Portal</div>
+        </a>
+        <div class="col-1"></div>
+        <a asp-controller="Staff" asp-action="Index" class="col">
+            <div class="action-box col">Staff Portal</div>
+        </a>
+    </div>
+</div>
 

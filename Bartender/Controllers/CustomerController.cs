@@ -5,6 +5,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Bartender.Models;
 using Bartender.Repository;
+using Microsoft.AspNetCore.Http;
+using Bartender.Models.ViewModels;
+using Bartender.Services.Interfaces;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Bartender.Controllers
 {
@@ -19,7 +28,7 @@ namespace Bartender.Controllers
             _repository = repository;
         }
 
-
+        [Authorize(Roles = "Staff,Customer")]
         public IActionResult Index()
         {
             IEnumerable<Drink> drinks = _repository.Drinks;
