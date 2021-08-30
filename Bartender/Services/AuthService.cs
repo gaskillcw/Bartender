@@ -3,14 +3,14 @@ using Bartender.Models.ViewModels;
 using Bartender.Repository;
 using Bartender.Services.Interfaces;
 
-namespace PreSemesterProject.Services
+namespace Bartender.Services
 {
     public class AuthService : IAuthService
     {
 
-        private Repository _repository;
+        private Repository.Repository _repository;
 
-        public AuthService(Repository repository)
+        public AuthService(Repository.Repository repository)
         {
             _repository = repository;
         }

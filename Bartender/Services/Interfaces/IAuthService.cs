@@ -1,7 +1,7 @@
 ﻿using Bartender.Models;
 using Bartender.Models.ViewModels;
 
-namespace PreSemesterProject.Services.Interfaces
+namespace Bartender.Services.Interfaces
 {
     public interface IAuthService
     {
