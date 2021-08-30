@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Bartender.Models;
 using Bartender.Repository;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Bartender.Controllers
 {

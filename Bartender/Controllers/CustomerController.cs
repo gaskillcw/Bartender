@@ -18,7 +18,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace Bartender.Controllers
 {
 
-
+    [Authorize(Roles = "Staff,Customer")]
     public class CustomerController : Controller
     {
         private Repository.Repository _repository;
@@ -28,7 +28,7 @@ namespace Bartender.Controllers
             _repository = repository;
         }
 
-        [Authorize(Roles = "Staff,Customer")]
+        
         public IActionResult Index()
         {
             IEnumerable<Drink> drinks = _repository.Drinks;
