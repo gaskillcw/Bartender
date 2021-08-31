@@ -35,5 +35,13 @@ namespace Bartender.Controllers
 
             return View(drinks.ToList());
         }
+
+        // this is where we will create order items
+        public IActionResult PlaceOrder(string Name, float Price, string Ingredients)
+        {
+
+
+            return RedirectToAction("Index");
+        }
     }
 }

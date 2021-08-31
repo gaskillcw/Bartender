@@ -21,7 +21,7 @@
                     <td>
                         <div class="options">
                             <!-- ADD A "PLACE ORDER" BUTTON, THIS IS A DUMMY PLACEHOLDER -->
-                            @Html.ActionLink("Place Order", "Index", "Home", null, new { @class = "btn btn-outline-dark m-2" })
+                            @Html.ActionLink("Place Order", "PlaceOrder", "Customer", new Order { Item = x.Name, Username = User.Identity.Name }, new { @class = "btn btn-outline-dark m-2" })
 
                         </div>
                     </td>
