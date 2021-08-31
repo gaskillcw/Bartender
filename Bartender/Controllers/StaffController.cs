@@ -39,7 +39,7 @@ namespace Bartender.Controllers
 
         
         // this is where orders will be deilvered
-        public IActionResult OrderReady(String id)
+        public IActionResult OrderReady(string id)
         {
             Order order = _repository.Orders.Where(x => x.OrderID.Equals(id)).FirstOrDefault();
 
