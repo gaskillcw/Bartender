@@ -39,13 +39,17 @@ namespace Bartender.Controllers
 
         
         // this is where orders will be deilvered
+        [HttpPost]
         public IActionResult OrderReady(string id)
         {
-            Order order = _repository.Orders.Where(x => x.OrderID.Equals(id)).FirstOrDefault();
+            Order order = _repository.Orders.Where(x => x.OrderID == id).FirstOrDefault();
+
+            if (order is null) { return NotFound($"Order with ID: {id} not found."); }
 
             _repository.Orders.Remove(order);
 
             return RedirectToAction("Index");
         }
+
     }
 }

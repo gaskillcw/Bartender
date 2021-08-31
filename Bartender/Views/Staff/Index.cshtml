@@ -6,28 +6,44 @@
 
 <section class="container">
 
-    <table class="table-primary">
-        <tr>
-            <th>Order ID</th>
-            <th>Customer Username</th>
-            <th>Item</th>
-            <th>Price</th>
-        </tr>
-        @foreach (var x in Model)
-        {
+    @if (Model.Count <= 0)
+    {
+        <div class="alert alert-info" role="alert">
+            No orders found.
+        </div>
+    }
+
+
+    @if (Model.Count > 0)
+    {
+        <table class="table-primary">
             <tr>
-                <td>@x.OrderID</td>
-                <td>@x.Username</td>
-                <td>@x.Item</td>
-                <td>@x.Price</td>
-                <td>
-                    <div class="options">
-                        <!-- ADD A "ORDER READY" BUTTON which removes the order from the list, THIS IS A DUMMY PLACEHOLDER -->
-                        @Html.ActionLink("Order Ready", "OrderReady", "Staff", x.OrderID, new { @class = "btn btn-outline-dark m-2" })
-                    </div>
-                </td>
+                <th>Order ID</th>
+                <th>Customer Username</th>
+                <th>Item</th>
+                <th>Price</th>
             </tr>
-        }
-    </table>
+
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.OrderID</td>
+                    <td>@x.Username</td>
+                    <td>@x.Item</td>
+                    <td>@x.Price</td>
+                    <td>
+                        <div class="options">
+
+                            <form method="post">
+                                <button type="submit" asp-action="OrderReady" asp-route-id="@x.OrderID" class="btn btn-outline-dark m-2">Order Ready</button>
+                            </form>
+
+                        </div>
+                    </td>
+                </tr>
+            }
+        </table>
+     }
+    
 
 </section>
