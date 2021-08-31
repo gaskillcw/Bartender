@@ -10,5 +10,6 @@ namespace Bartender.Models
         public string OrderID { get; set; }
         public string Username { get; set; }
         public string Item { get; set; }
+        public float Price { get; set; }
     }
 }

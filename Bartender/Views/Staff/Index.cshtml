@@ -11,6 +11,7 @@
             <th>Order ID</th>
             <th>Customer Username</th>
             <th>Item</th>
+            <th>Price</th>
         </tr>
         @foreach (var x in Model)
         {
@@ -18,6 +19,7 @@
                 <td>@x.OrderID</td>
                 <td>@x.Username</td>
                 <td>@x.Item</td>
+                <td>@x.Price</td>
                 <td>
                     <div class="options">
                         <!-- ADD A "ORDER READY" BUTTON which removes the order from the list, THIS IS A DUMMY PLACEHOLDER -->

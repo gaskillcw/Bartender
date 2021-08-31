@@ -62,14 +62,16 @@ namespace Bartender.Repository
             {
                 OrderID = Guid.NewGuid().ToString(),
                 Username = "sacarali",
-                Item = "Pina Colada"
+                Item = "Pina Colada",
+                Price = 11.99F
             });
 
             Orders.Add(new Order()
             {
                 OrderID = Guid.NewGuid().ToString(),
                 Username = "sacarali",
-                Item = "Whiskey Sour"
+                Item = "Whiskey Sour",
+                Price = 8.99F
             });
 
 
