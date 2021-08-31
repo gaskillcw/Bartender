@@ -25,6 +25,10 @@
                         <!-- ADD A "ORDER READY" BUTTON which removes the order from the list, THIS IS A DUMMY PLACEHOLDER -->
                         @Html.ActionLink("Order Ready", "OrderReady", "Staff", x.OrderID, new { @class = "btn btn-outline-dark m-2" })
 
+                        <!-- GONNA TRY SOMETHING DIFFERENT -->
+                        @Html.ActionLink("Order Ready", "OrderReady", "Staff", new Order { OrderID = x.OrderID, Item = x.Item, Username = x.Username, Price = x.Price}, new { @class = "btn btn-outline-dark m-2" })
+
+
                     </div>
                 </td>
             </tr>
