@@ -37,9 +37,11 @@ namespace Bartender.Controllers
         }
 
         // this is where we will create order items
-        public IActionResult PlaceOrder(string Name, float Price, string Ingredients)
+        public IActionResult PlaceOrder(Order order)
         {
+            order.OrderID = Guid.NewGuid().ToString();
 
+            _repository.Orders.Add(order);
 
             return RedirectToAction("Index");
         }
