@@ -35,5 +35,15 @@ namespace Bartender.Controllers
 
             return View(orders.ToList());
         }
+
+        // this is where orders will be deilvered
+        public IActionResult OrderReady(String id)
+        {
+            Order order = _repository.Orders.Where(x => x.OrderID == id).FirstOrDefault();
+
+            _repository.Orders.Remove(order);
+
+            return RedirectToAction("Index");
+        }
     }
 }
