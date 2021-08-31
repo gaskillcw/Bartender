@@ -37,21 +37,12 @@ namespace Bartender.Controllers
         }
 
 
-        /*
+        
         // this is where orders will be deilvered
         public IActionResult OrderReady(String id)
         {
             Order order = _repository.Orders.Where(x => x.OrderID.Equals(id)).FirstOrDefault();
 
-            _repository.Orders.Remove(order);
-
-            return RedirectToAction("Index");
-        }
-        */
-
-        // GONNA TRY SOMETHING DIFFERENT
-        public IActionResult OrderReady(Order order)
-        {
             _repository.Orders.Remove(order);
 
             return RedirectToAction("Index");
