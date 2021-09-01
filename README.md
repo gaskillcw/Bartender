@@ -5,6 +5,7 @@ bartender app for cis4327
 LOGIN INFO
 
 When logging into the program, use one of the following users:
+
 Staff:
 User: gaskillcw
 Pass: test
