@@ -7,11 +7,16 @@ LOGIN INFO
 When logging into the program, use one of the following users:
 
 Staff:
+
 User: gaskillcw
+
 Pass: test
 
+
 Customer:
+
 User: sacarali
+
 Pass: test
 
 ----------------------------------------------------------------
