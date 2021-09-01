@@ -51,5 +51,21 @@ namespace Bartender.Controllers
             return RedirectToAction("Index");
         }
 
+        // ADDITIONAL EXPERIMENTAL FEATURES BELOW FOR PRACTICE, NOT REQUIRED BY PROJECT
+        
+        [HttpGet]
+        public IActionResult CreateDrink()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateDrink(Drink drink)
+        {
+            _repository.Drinks.Add(drink);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
