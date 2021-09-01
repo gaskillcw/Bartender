@@ -1,0 +1,38 @@
+﻿@model Bartender.Models.Drink
+
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create Drink</h2>
+
+<div class="container">
+    <form asp-action="CreateDrink" method="post">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" type="text" class="form-control" required>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Price" class="form-label">Name</label>
+            <input asp-for="Price" type="number" class="form-control" required>
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Ingredients" class="form-label">Name</label>
+            <input asp-for="Ingredients" type="text" class="form-control" required>
+            <span asp-validation-for="Ingredients" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-success">Submit</button>
+            @Html.ActionLink("Cancel", "Index", "Staff", null, new { @class = "btn btn-success" })
+        </div>
+
+    </form>
+
+</div>
+
+

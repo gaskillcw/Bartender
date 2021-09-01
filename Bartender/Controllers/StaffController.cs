@@ -62,6 +62,9 @@ namespace Bartender.Controllers
         [HttpPost]
         public IActionResult CreateDrink(Drink drink)
         {
+            if (!ModelState.IsValid) { return View(); }
+
+
             _repository.Drinks.Add(drink);
 
             return RedirectToAction("Index");
