@@ -20,7 +20,7 @@
                     <td>@x.Ingredients</td>
                     <td>
                         <div class="options">
-                            @Html.ActionLink("Place Order", "PlaceOrder", "Customer", new Order { Item = x.Name, Price = x.Price, Username = User.Identity.Name }, new { @class = "btn btn-outline-dark m-2" })
+                            @Html.ActionLink("Place Order", "PlaceOrder", "Customer", new Order { Item = x.Name, Price = x.Price, Username = User.Identity.Name }, new { @class = "btn btn-primary m-2" })
                         </div>
                     </td>
                 </tr>
