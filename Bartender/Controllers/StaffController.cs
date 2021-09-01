@@ -70,5 +70,22 @@ namespace Bartender.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public IActionResult CreateUser()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateUser(User user)
+        {
+            if (!ModelState.IsValid) { return View(); }
+
+
+            _repository.Users.Add(user);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
