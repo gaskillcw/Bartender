@@ -1,0 +1,40 @@
+﻿@model Bartender.Models.User
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create User</h2>
+
+<div class="container">
+    <form asp-action="CreateUser" method="post">
+        <div class="mb-3">
+            <label asp-for="Username" class="form-label">Username</label>
+            <input asp-for="Username" type="text" class="form-control" required>
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label">Password</label>
+            <input asp-for="Password" type="password" class="form-control" required>
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Roles" class="form-label">Role</label>
+            <input asp-for="Roles" type="text" class="form-control" required>
+            <span asp-validation-for="Roles" class="text-danger"></span>
+        </div>
+
+
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-success">Submit</button>
+            @Html.ActionLink("Cancel", "Index", "Staff", null, new { @class = "btn btn-success" })
+        </div>
+
+    </form>
+
+</div>
+
+
