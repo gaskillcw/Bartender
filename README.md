@@ -39,5 +39,12 @@ is displayed. A Staff user is then able to press the button beside
 the corresponding order they wish to fulfill, which will remove the
 order from the list of orders in the repository.
 
+---------------------------------------------------------------
+EXPERIMENTAL BRANCH
 
+The experimental branch contains additional features beyond that
+which the project required. Some of the features include methods
+for creating new drinks and creating new users (both Customer and
+Staff variants). These administrative features are accessible
+through the Staff portal.
 
